@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h4>Alineando columnas</h4>
+   <div class= "row">
+       <div class="col align-self-end">
+           column 1
+       </div>
+
+       <div class="col align-self-baseline">
+           column 2
+       </div>
+      
+       <div class="col align-self-center">
+           column 3
+       </div>
+   </div> 
+
+   <h4>Offset and auto ms</h4>
+   <div class= "row">
+       <div class="col-1 offset-3">
+           column 1
+       </div>
+
+       <div class="col-3 ms-auto">
+           column 2
+       </div>
+   </div> 
+
+
+    <h4>Gutter gx, gy and g for general</h4>
+   <div class= "row gx-sm-0 gx-md-3 gx-lg-5 gy-5"> 
+       <div class="col-6 align-self-center">
+           <div class="bg-light border">
+           column 1
+           </div>
+       </div>
+
+       <div class="col-6 align-self-center">
+           <div class="bg-light border">
+           column 2
+           </div>
+       </div>
+       <div class="col-6 align-self-center">
+           <div class="bg-light border">
+           column 3
+           </div>
+       </div>
+
+       <div class="col-6 align-self-center">
+           <div class="bg-light border">
+           column 4
+           </div>
+       </div>
+    </div>
+
+    <div class="row gy-4">
+        <div class="col">
+            <img class="img-fluid rounded-circle img-thumbnail" src="~/lib/20220721_132030.jpg" alt="Miguel Angel Lofredo" height="300px" width="240px"/>
+        </div>
+         <div class="col">
+            <img class="img-fluid" src="~/lib/20220721_132030.jpg" alt="Miguel Angel Lofredo" height="300px" width="240px"/>
+        </div>
+         <div class="col">
+            <img class="img-fluid" src="~/lib/20220721_132030.jpg" alt="Miguel Angel Lofredo" height="300px" width="240px"/>
+        </div>
+    </div>
