@@ -1,5 +1,5 @@
 # C-Sharp-and-Asp.Net-MVC curso dfeito na plataforma Udemy com o professor Felipe Gavilán.
-## ¡ASP.NET Core, Dapper, SQL Server, Procedimientos Almacenados, Sistema de usuarios, y mucho más!
+## ¡ASP.NET Core, Dapper, SQL Server, Procedimentos Almacenados, Sistema de usuarios, y muito mais!
 
 ### O que foi aprendido no curso
 
