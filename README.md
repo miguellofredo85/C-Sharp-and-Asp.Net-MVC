@@ -3,8 +3,8 @@
 
 ### O que foi aprendido no curso
 
-. Entender el patrón de desarrollo web MVC
-. Desarrollar varios proyectos web con MVC
+. Entender el patrón de desarrollo web MVC \n
+. Desarrollar varios proyectos web con MVC \n
 . Comunicarte con una base de datos de SQL Server usando Dapper
 . Publicar aplicaciones de MVC en Azure y IIS
 
