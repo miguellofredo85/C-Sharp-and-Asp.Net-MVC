@@ -2,7 +2,11 @@
 
 namespace Portfolio.Services
 {
-    public class RepoProjetos
+    public interface IRepoProjetos
+    {
+        List<Project> GetProjects();
+    }
+    public class RepoProjetos: IRepoProjetos
     {
         public List<Project> GetProjects()
         {

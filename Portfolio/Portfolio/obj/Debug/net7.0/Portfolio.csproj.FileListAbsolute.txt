@@ -60,3 +60,7 @@ C:\Users\Cangel\source\repos\miguellofredo85\C-Sharp-and-Asp.Net-MVC\Portfolio\P
 C:\Users\Cangel\source\repos\miguellofredo85\C-Sharp-and-Asp.Net-MVC\Portfolio\Portfolio\obj\Debug\net7.0\Portfolio.pdb
 C:\Users\Cangel\Source\Repos\miguellofredo85\C-Sharp-and-Asp.Net-MVC\Portfolio\Portfolio\obj\Debug\net7.0\Portfolio.genruntimeconfig.cache
 C:\Users\Cangel\Source\Repos\miguellofredo85\C-Sharp-and-Asp.Net-MVC\Portfolio\Portfolio\obj\Debug\net7.0\ref\Portfolio.dll
+C:\Users\Cangel\source\repos\miguellofredo85\C-Sharp-and-Asp.Net-MVC\Portfolio\Portfolio\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Cangel\source\repos\miguellofredo85\C-Sharp-and-Asp.Net-MVC\Portfolio\Portfolio\bin\Debug\net7.0\SendGrid.dll
+C:\Users\Cangel\source\repos\miguellofredo85\C-Sharp-and-Asp.Net-MVC\Portfolio\Portfolio\bin\Debug\net7.0\StarkbankEcdsa.dll
+C:\Users\Cangel\source\repos\miguellofredo85\C-Sharp-and-Asp.Net-MVC\Portfolio\Portfolio\obj\Debug\net7.0\Portfolio.csproj.CopyComplete

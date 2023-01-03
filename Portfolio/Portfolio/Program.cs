@@ -4,7 +4,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddTransient<RepoProjetos>(); // allows to instance when put it in the constructos of a class
+builder.Services.AddTransient<IRepoProjetos ,RepoProjetos>(); // allows to instance when put it in the constructor of a class
+builder.Services.AddTransient<IServicioEmail, ServicioEmailSendGrid>();
 
 var app = builder.Build();
 

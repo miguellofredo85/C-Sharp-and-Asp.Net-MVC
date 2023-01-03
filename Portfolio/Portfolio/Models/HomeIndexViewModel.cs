@@ -2,6 +2,6 @@
 {
     public class HomeIndexViewModel
     {
-        public IEnumerable<Project> Projects{ get; set; }
+        public IEnumerable<Project>? Projects { get; set; }
     }
 }

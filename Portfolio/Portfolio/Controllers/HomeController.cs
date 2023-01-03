@@ -8,12 +8,17 @@ namespace Portfolio.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly RepoProjetos repoProjetos;
+        private readonly IRepoProjetos repoProjetos;
+        private readonly IServicioEmail servicioEmail;
 
-        public HomeController(ILogger<HomeController> logger, RepoProjetos repoProjetos)
+        public HomeController(
+            ILogger<HomeController> logger, 
+            IRepoProjetos repoProjetos, 
+            IServicioEmail servicioEmail)
         {
             _logger = logger;
             this.repoProjetos = repoProjetos;
+            this.servicioEmail = servicioEmail;
         }
 
         
@@ -25,10 +30,31 @@ namespace Portfolio.Controllers
             return View(model);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Projects()
+        {
+            var projetos = repoProjetos.GetProjects();
+            return View(projetos);
+        }
+
+        [HttpGet]
+        public IActionResult Contacto()
         {
             return View();
         }
+
+        [HttpPost]
+
+        public async Task<IActionResult> Contacto(ContactoViewModel contactoViewModel)
+        {
+            await servicioEmail.Enviar(contactoViewModel);
+            return RedirectToAction("Gracias");
+        }
+
+        public IActionResult Gracias()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
