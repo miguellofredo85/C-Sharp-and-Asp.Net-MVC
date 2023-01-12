@@ -16,12 +16,28 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Cangel\Source\Repos\miguellofredo85\C-Sharp-and-Asp.Net-MVC\Portfolio\Portfolio
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Cangel/Source/Repos/miguellofredo85/C-Sharp-and-Asp.Net-MVC/Portfolio/Portfolio/Views/Home/Contacto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Cangel/Source/Repos/miguellofredo85/C-Sharp-and-Asp.Net-MVC/Portfolio/Portfolio/Views/Home/Gracias.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHcmFjaWFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Cangel/Source/Repos/miguellofredo85/C-Sharp-and-Asp.Net-MVC/Portfolio/Portfolio/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Cangel/Source/Repos/miguellofredo85/C-Sharp-and-Asp.Net-MVC/Portfolio/Portfolio/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Cangel/Source/Repos/miguellofredo85/C-Sharp-and-Asp.Net-MVC/Portfolio/Portfolio/Views/Home/Projects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9qZWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Cangel/Source/Repos/miguellofredo85/C-Sharp-and-Asp.Net-MVC/Portfolio/Portfolio/Views/Home/_ListadoProjetos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfTGlzdGFkb1Byb2pldG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Cangel/Source/Repos/miguellofredo85/C-Sharp-and-Asp.Net-MVC/Portfolio/Portfolio/Views/Home/_Presentation.cshtml]
