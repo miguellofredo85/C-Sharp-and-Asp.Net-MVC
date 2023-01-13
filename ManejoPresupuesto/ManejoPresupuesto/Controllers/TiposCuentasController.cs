@@ -2,7 +2,7 @@
 using ManejoPresupuesto.Models;
 using ManejoPresupuesto.Servicios;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
+
 
 namespace ManejoPresupuesto.Controllers
 {
@@ -19,14 +19,15 @@ namespace ManejoPresupuesto.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Crear(TipoCuenta tipoCuenta)
+        public async Task<IActionResult> Crear(TipoCuenta tipoCuenta)
         {
             if (!ModelState.IsValid) // hace que no se borre la info del formulario al presionar enviar
             {
                 return View(tipoCuenta);
             }
 
-            repositorioTiposCuentas.Crear(tipoCuenta);
+            tipoCuenta.UsuarioId = 1;
+            await repositorioTiposCuentas.Crear(tipoCuenta);
 
             return View();
         }
