@@ -27,5 +27,16 @@ namespace ManejoPresupuesto.Servicios
             tipoCuenta.Id= id;
 
         }
+
+        public async Task<bool> Existe(int usuarioId, string nombre)
+        {
+            using var connection = new SqlConnection(connectionString);
+
+            var existe = await connection.QueryFirstOrDefaultAsync<int>(
+                                                                   $@"select 1
+                                                                      from TipoCuentas
+                                                                      where Nombre = @Nombre and UsuarioId = @UsuarioId;",
+                                                                   new {nombre, usuarioId});
+        }
     }
 }

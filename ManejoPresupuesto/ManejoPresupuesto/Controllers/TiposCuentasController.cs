@@ -1,5 +1,4 @@
-﻿using Dapper;
-using ManejoPresupuesto.Models;
+﻿using ManejoPresupuesto.Models;
 using ManejoPresupuesto.Servicios;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,6 +26,16 @@ namespace ManejoPresupuesto.Controllers
             }
 
             tipoCuenta.UsuarioId = 1;
+
+            var yaExisteTipoCuenta =
+                await repositorioTiposCuentas.Existe(tipoCuenta.UsuarioId, tipoCuenta.Nombre);
+
+            if (yaExisteTipoCuenta)
+            {
+                ModelState.AddModelError(nameof(tipoCuenta),
+                    $"El nombre {tipoCuenta.Nombre} ya existe");
+            }
+
             await repositorioTiposCuentas.Crear(tipoCuenta);
 
             return View();
