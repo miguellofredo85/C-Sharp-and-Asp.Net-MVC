@@ -10,7 +10,7 @@ namespace ManejoPresupuesto.Models
 
         [Required(ErrorMessage ="El campo {0} es obligatorio")]
         [PrimeraLetraMayuscula]
-        //[Remote(action: "VerificarExistenciaCuenta", controller:"TiposCuentas")]
+        [Remote(action: "VerificarExistenciaCuenta", controller:"TiposCuentas")]
         // Remote hace conexion del front y back y valida entrando al httpget del action para validar
         // el httppost del crear y verificar yaExisteTipoCuenta
         public string Nombre { get; set; }

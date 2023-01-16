@@ -13,10 +13,18 @@ namespace ManejoPresupuesto.Controllers
         {
             this.repositorioTiposCuentas = repositorioTiposCuentas;
         }
+
+        public async Task<IActionResult> Index()
+        {
+            var usuarioId = 1;
+            var tiposCuentas = await repositorioTiposCuentas.Obtener(usuarioId);
+            return View(tiposCuentas);
+        }
         public IActionResult Crear()
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> Crear(TipoCuenta tipoCuenta)
         {
@@ -27,31 +35,30 @@ namespace ManejoPresupuesto.Controllers
 
             tipoCuenta.UsuarioId = 1;
 
-            var yaExisteTipoCuenta =
-                await repositorioTiposCuentas.Existe(tipoCuenta.UsuarioId, tipoCuenta.Nombre);
+            var yaExisteTipoCuenta = await repositorioTiposCuentas.Existe(tipoCuenta.UsuarioId, tipoCuenta.Nombre);
 
             if (yaExisteTipoCuenta)
             {
-                ModelState.AddModelError(nameof(tipoCuenta),
+                ModelState.AddModelError(nameof(tipoCuenta.Nombre),
                     $"El nombre {tipoCuenta.Nombre} ya existe");
             }
 
             await repositorioTiposCuentas.Crear(tipoCuenta);
 
-            return View();
+            return RedirectToAction("Index");
         }
 
-        //[HttpGet]
-        //public async Task<IActionResult> VerificarExistenciaCuenta(string nombre)
-        //{
-        //    var usuarioId = 1;
-        //    var yaExisteTipoCuenta = await repositorioTiposCuentas.Existe(usuarioId, nombre);
+        [HttpGet]
+        public async Task<IActionResult> VerificarExistenciaCuenta(string nombre)
+        {
+            var usuarioId = 1;
+            var yaExisteTipoCuenta = await repositorioTiposCuentas.Existe(usuarioId, nombre);
 
-        //    if (yaExisteTipoCuenta)
-        //    {
-        //        return Json($"El {nombre} ya existe");
-        //    }
-        //    return Json(true);
-        //}
+            if (yaExisteTipoCuenta)
+            {
+                return Json($"El {nombre} ya existe");
+            }
+            return Json(true);
+        }
     }
 }
