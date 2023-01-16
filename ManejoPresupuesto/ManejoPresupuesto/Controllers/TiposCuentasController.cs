@@ -41,17 +41,17 @@ namespace ManejoPresupuesto.Controllers
             return View();
         }
 
-        [HttpGet]
-        public async Task<IActionResult> VerificarExistenciaCuenta(string nombre)
-        {
-            var usuarioId = 1;
-            var yaExisteTipoCuenta = await repositorioTiposCuentas.Existe(usuarioId, nombre);
+        //[HttpGet]
+        //public async Task<IActionResult> VerificarExistenciaCuenta(string nombre)
+        //{
+        //    var usuarioId = 1;
+        //    var yaExisteTipoCuenta = await repositorioTiposCuentas.Existe(usuarioId, nombre);
 
-            if (yaExisteTipoCuenta)
-            {
-                return Json($"El {nombre} ya existe");
-            }
-            return Json(true);
-        }
+        //    if (yaExisteTipoCuenta)
+        //    {
+        //        return Json($"El {nombre} ya existe");
+        //    }
+        //    return Json(true);
+        //}
     }
 }
