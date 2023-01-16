@@ -7,6 +7,7 @@ namespace ManejoPresupuesto.Servicios
     public interface IRepositorioTiposCuentas
     {
         Task Crear(TipoCuenta tipoCuenta);
+        Task<bool> Existe(int usuarioId, string nombre);
     }
     public class RepositorioTiposCuentas : IRepositorioTiposCuentas
     {
@@ -37,6 +38,7 @@ namespace ManejoPresupuesto.Servicios
                                                                       from TipoCuentas
                                                                       where Nombre = @Nombre and UsuarioId = @UsuarioId;",
                                                                    new {nombre, usuarioId});
+            return existe == 1;
         }
     }
 }
