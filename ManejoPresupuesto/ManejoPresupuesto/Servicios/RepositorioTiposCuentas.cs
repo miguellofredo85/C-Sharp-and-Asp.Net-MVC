@@ -14,10 +14,12 @@ namespace ManejoPresupuesto.Servicios
     {
         private readonly string connectionString;
 
-        public RepositorioTiposCuentas(IConfiguration configuration)
+        public RepositorioTiposCuentas()
         {
-            connectionString = configuration.GetConnectionString("DefaultConnection");
+            connectionString = "Server=MIGUEL; Database=ManejoPresupuesto; Integrated Security= True; TrustServerCertificate=True; Encrypt=False; Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False";
+
         }
+
         public async Task Crear(TipoCuenta tipoCuenta)
         {
             using var connection = new SqlConnection(connectionString);
@@ -43,7 +45,7 @@ namespace ManejoPresupuesto.Servicios
                 $@"select Id, Nombre, Orden
                    from TiposCuentas
                    where UsuarioId = @UsuarioId",
-                   new {usuarioId});
+                   new { usuarioId });
         }
     }
 }
