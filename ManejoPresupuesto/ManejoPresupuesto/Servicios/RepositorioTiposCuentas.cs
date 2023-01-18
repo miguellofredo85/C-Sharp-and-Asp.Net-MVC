@@ -14,9 +14,9 @@ namespace ManejoPresupuesto.Servicios
     {
         private readonly string connectionString;
 
-        public RepositorioTiposCuentas()
+        public RepositorioTiposCuentas(IConfiguration configuration)
         {
-            connectionString = "Server=MIGUEL; Database=ManejoPresupuesto; Integrated Security= True; TrustServerCertificate=True; Encrypt=False; Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False";
+            connectionString = configuration.GetConnectionString("DefaultConnection");
 
         }
 
