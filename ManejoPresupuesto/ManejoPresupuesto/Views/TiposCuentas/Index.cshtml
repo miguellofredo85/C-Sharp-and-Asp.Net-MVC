@@ -17,15 +17,15 @@
         </tr>
     </thead>    
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var tipoCuenta in Model)
         {
             <tr>
                 <td>
-                    <a class="btn btn-primary">Editar</a>
+                    <a class="btn btn-primary" asp-action="Editar" asp-route-id="@tipoCuenta.Id">Editar</a>
                     <a class="btn btn-danger">Borrar</a>
                 </td>
                 <td>
-                    @item.Nombre
+                    @tipoCuenta.Nombre
                 </td>
             </tr>
         }
