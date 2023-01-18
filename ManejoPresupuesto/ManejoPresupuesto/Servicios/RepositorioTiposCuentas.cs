@@ -29,7 +29,7 @@ namespace ManejoPresupuesto.Servicios
             using var connection = new SqlConnection(connectionString);
 
             var id = await connection.QuerySingleAsync<int>(
-                $@"insert into TiposCuentas (Nombre, UsuarioId, Orden) values (@Nombre, @UsuarioId, 0) SELECT SCOPE_IDENTITY();", tipoCuenta);
+                "TiposCuentas_Insertar", new { usuarioId = tipoCuenta.UsuarioId, nombre = tipoCuenta.Nombre }, commandType: System.Data.CommandType.StoredProcedure);
             tipoCuenta.Id= id;
 
         }
