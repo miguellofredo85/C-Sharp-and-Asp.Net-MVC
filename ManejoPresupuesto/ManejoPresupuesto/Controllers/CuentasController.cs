@@ -32,8 +32,6 @@ namespace ManejoPresupuesto.Controllers
                     Cuentas = grupo.AsEnumerable()
                 }).ToList();
             return View(modelo);
-
-
         }
 
         [HttpGet]

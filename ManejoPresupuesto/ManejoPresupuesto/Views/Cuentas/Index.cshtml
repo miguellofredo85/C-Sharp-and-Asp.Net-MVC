@@ -1,6 +1,16 @@
 ﻿@model IEnumerable<IndiceCuentasViewModel>
 @{
     ViewData["Ttile"] = "Cuantas";
+
+    string FormatearBalance(decimal balance)
+    {
+        return Math.Abs(balance).ToString();
+    }
+    string ObtenerClaseBalance(decimal balance)
+    {
+        return balance >= 0 ? "activo" : "pasivo";
+    }
+
 }
 
 <h1>Cuentas</h1>
@@ -13,7 +23,7 @@
             <strong>Activos</strong>
         </div>
         <div class="activo">
-            @Model.Where(x => x.Balance > 0).Sum(x => x.Balance)
+           @FormatearBalance(Model.Where(x => x.Balance > 0).Sum(x => x.Balance))
         </div>
     </div>
     <div>
@@ -21,15 +31,32 @@
             <strong>Pasivos</strong>
         </div>
         <div class="pasivo">
-            @Model.Where(x => x.Balance < 0).Sum(x => x.Balance)
+            @FormatearBalance(Model.Where(x => x.Balance < 0).Sum(x => x.Balance))
         </div>
     </div>
     <div>
         <strong>Total</strong>
     </div>
     <div class="total">
-        @Model.Sum(x => x.Balance)
+        @FormatearBalance(Model.Sum(x => x.Balance))
     </div>
+</div>
+
+<div class="accordion acordeon-cuentas">
+    @foreach (var tipoCuenta in Model)
+    {
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="cabeceraUno">
+                @{
+                    var id = tipoCuenta.TipoCuenta.Replace(" ", "");
+                    var dataBSTarget = "#" + id;
+                    var claseTipoCuenta = ObtenerClaseBalance(tipoCuenta.Balance);
+                }
+                <button></button>
+            </h2>
+        </div>
+    }
+
 </div>
 
 
