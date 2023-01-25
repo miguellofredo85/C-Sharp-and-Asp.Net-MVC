@@ -11,7 +11,6 @@ namespace ManejoPresupuesto.Controllers
         private readonly IRepositorioTiposCuentas repositorioTiposCuentas;
         private readonly IServicioUsuario servicioUsuario;
         private readonly IRepositorioCuentas repositorioCuentas;
-
         public CuentasController(IRepositorioTiposCuentas repositorioTiposCuentas,
             IServicioUsuario servicioUsuario, IRepositorioCuentas repositorioCuentas) 
         {
@@ -43,7 +42,7 @@ namespace ManejoPresupuesto.Controllers
             return View(modelo);
         }
         [HttpPost]
-        public async Task<IActionResult> CrearCuenta(CuentaCreacionViewModel cuenta)
+        public async Task<IActionResult> Crear(CuentaCreacionViewModel cuenta)
         {
             var usuarioId = servicioUsuario.ObtenerUsuarioId();
             var tipoCuenta = await repositorioTiposCuentas.ObtenerPorId(cuenta.TipoCuentaId, usuarioId);
